@@ -38,25 +38,31 @@ export default function Main() {
       <hr />
       <div classNam="menu-tabs container">
         <div className="menu-tabs d-flex justify-content-around">
-          <button className="btn btn-primary" onClick={() => filterItem(3)}>
+          <button className="btn btn-primary" onClick={() => filterItem(1)}>
             Ratin1
           </button>
-          <button className="btn btn-primary">Ratin2</button>
+          <button className="btn btn-primary" onClick={() => filterItem(2)}>
+            Ratin2
+          </button>
 
-          <button className="btn btn-primary">Ratin3</button>
+          <button className="btn btn-primary" onClick={() => filterItem(3)}>
+            Ratin3
+          </button>
 
-          <button className="btn btn-primary">Ratin4 </button>
+          <button className="btn btn-primary" onClick={() => filterItem(4)}>
+            Ratin4{" "}
+          </button>
         </div>
       </div>
 
-      <div className="menu-items container-fluid mt-5">
+      <div className="menu-items container-fluid mt-5 ">
         <div className="row">
           <div className="col-11 mx-auto">
             <div className="row my-5">
               {hotels.map((el) => {
                 const { img, name, description, price, rating } = el;
                 return (
-                  <div className="item1 col-12 col-md-6 col-lg-6 col-xl-4">
+                  <div className="item1 col-12 col-md-6 col-lg-6 col-xl-4 my-3 mx-3">
                     <div className="row Item-inside">
                       <div className="col-12 col-md-12 col-lg-4 img-div">
                         <img
